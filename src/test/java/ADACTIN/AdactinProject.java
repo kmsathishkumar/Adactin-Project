@@ -329,6 +329,13 @@ public class AdactinProject {
 
 		System.out.println("************************************************");
 		driver.quit();
+	String a="Tamil";
+	String b="English";
+	boolean c=true;
+	System.out.println(a);
+	System.out.println(b);
+	System.out.println(c);
+	
 	}
 
 }
