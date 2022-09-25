@@ -47,6 +47,11 @@ public class AdactinProject {
 		String LogoutTittle = "Adactin.com - Logout";
 		String LogoutHeader = "You have successfully logged out";
 
+		int a = 10;
+		int b = 15;
+		int c = a + b;
+		System.out.println("The Output Is = " + c);
+
 		System.setProperty("webdriver.chrome.driver",
 				"D:\\Software\\EcpliseWorkspace\\Adactin\\driver\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
@@ -66,11 +71,11 @@ public class AdactinProject {
 		} else {
 			System.out.println("Fail - My Expected Window Is Not Opened");
 		}
-		
+
 		WebElement documentheader = driver.findElement(By.xpath("//p[contains(text(),'Adactin Launches')]"));
 		String pageheader = documentheader.getText();
 		System.out.println("Page Header Name Is = " + pageheader);
-		
+
 		if (AdactinHeader.equals(pageheader)) {
 			System.out.println("Pass - My Header Documents Is Correct");
 		} else {
@@ -97,7 +102,7 @@ public class AdactinProject {
 		String SearchPageCurrentUrl = driver.getCurrentUrl();
 		System.out.println("My SearchPage URL Is = " + SearchPageCurrentUrl);
 		System.out.println("My SearchPage Tittle Is = " + SearchPageCurrentTittle);
-		
+
 		WebElement AdactinGroup = driver.findElement(By.xpath("//td[contains(text(),'Search Hotel')]"));
 		String txtSearchHotelHeader = AdactinGroup.getText();
 		System.out.println("Page SearchPage Name Is = " + txtSearchHotelHeader);
@@ -234,7 +239,8 @@ public class AdactinProject {
 			System.out.println("Fail - Book A Hotel Page Is Not Correct");
 		}
 
-		WebElement BookingConfirmPageHeader = driver.findElement(By.xpath("//td[contains(text(),'Booking Confirmation')]"));
+		WebElement BookingConfirmPageHeader = driver
+				.findElement(By.xpath("//td[contains(text(),'Booking Confirmation')]"));
 		String BookingConfirmHeader = BookingConfirmPageHeader.getText();
 		System.out.println("Book A Page Header = " + BookingConfirmHeader);
 
@@ -316,7 +322,8 @@ public class AdactinProject {
 			System.out.println("Fail - Logout Page Is Not Correct");
 		}
 
-		WebElement lagoutPageHeader = driver.findElement(By.xpath("//td[contains(text(),'You have successfully logged out')]"));
+		WebElement lagoutPageHeader = driver
+				.findElement(By.xpath("//td[contains(text(),'You have successfully logged out')]"));
 		String LogoutPageHead = lagoutPageHeader.getText();
 		System.out.println("Logout Page Header = " + LogoutPageHead);
 
